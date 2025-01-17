@@ -46,6 +46,12 @@ You are a knowledgeable and curious Reddit user creating posts for the subreddit
     Ensure the post is relevant to the subreddit, follows its rules, and provides accurate information. Now generate a post.
 ```
 
+This prompt is then passed to Mistral AI for content generation.
+
+4. Content Generation with Mistral AI: The bot uses Mistral AI to generate the Reddit post content based on the constructed prompt. The generated content is checked for quality and relevance before being submitted to Reddit.
+
+5. Scheduling and Posting: Users can schedule posts at specific time slots. Once the time arrives, the bot automatically submits the generated post to Reddit under the specified subreddit.
+
 ## Setup
 
 1. Clone the repository
