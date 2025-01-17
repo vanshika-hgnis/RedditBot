@@ -18,6 +18,8 @@ A Reddit bot that automatically generates and posts content using Mistral AI.The
 ![alt text](db/image.png)
 ![alt text](db/image1.png)
 
+## Methodology
+
 ## Setup
 
 1. Clone the repository
@@ -42,34 +44,8 @@ TARGET_SUBREDDIT=your_target_subreddit
 4. Run the bot:
 
 ```bash
-python src/bot.py
+streamlit run app.py
 ```
-
-## Project Structure
-
-- `src/`: Main source code
-  - `bot.py`: Main bot implementation
-  - `config.py`: Configuration management
-  - `utils/`: Utility functions
-    - `content_generator.py`: Mistral AI integration
-    - `logger.py`: Logging configuration
-- `logs/`: Log files
-- `requirements.txt`: Project dependencies
-- `.env`: Environment variables
-
-## Configuration
-
-- Adjust posting schedule in `bot.py`
-- Modify content generation prompts in `utils/content_generator.py`
-- Configure logging settings in `utils/logger.py`
-
-## Error Handling
-
-The bot includes comprehensive error handling and logging:
-
-- All errors are logged to `logs/bot.log`
-- Automatic retry mechanism for failed operations
-- Detailed error messages for debugging
 
 ## License
 

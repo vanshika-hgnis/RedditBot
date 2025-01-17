@@ -4,4 +4,5 @@
  dotenv
  shedule
  mistralai
+ streamlit
  
