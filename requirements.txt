@@ -1,3 +1,7 @@
  praw 
  requests 
  apscheduler
+ dotenv
+ shedule
+ grok
+ 
