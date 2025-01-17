@@ -12,7 +12,7 @@ The Reddit Mistral Bot is an automated Reddit content generation and posting bot
 
 ## Streamlit App
 
-![alt text](db/app.mp4)
+![Example Video](db/app.mp4)
 
 ## Base Implemenation
 
