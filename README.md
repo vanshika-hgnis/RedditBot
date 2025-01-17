@@ -1,24 +1,50 @@
 # Reddit Mistral Bot
 
-About
-A Reddit bot that automatically generates and posts content using Mistral AI.The user can also schedules post by time slots.
+The Reddit Mistral Bot is an automated Reddit content generation and posting bot that leverages Mistral AI to generate posts and comments. The bot can automatically post content to a Reddit subreddit and allows users to schedule posts at specific times.
 
-## Features
+# Features
 
-- Daily automated posting at user-specified times
-- Content generation using Mistral AI
-- Basic comment generation capability
-- Error handling and logging
-- Scheduled posting system
+- Daily Automated Posting: Posts are made at user-specified times of the day.
+- Content Generation: Uses Mistral AI to generate creative and contextually relevant Reddit posts based on top posts from the target subreddit.
+- Comment Generation: Can generate comments for posts (this feature is currently in development).
+- Error Handling and Logging: Proper logging and error handling mechanisms are in place to ensure smooth operation.
+- Scheduled Posting System: Users can set time slots for when they want posts to be automatically generated and submitted to Reddit.
 
 ## Streamlit App
+
+![alt text](db/app.mp4)
 
 ## Base Implemenation
 
 ![alt text](db/image.png)
 ![alt text](db/image1.png)
 
-## Methodology
+## Methodologyy
+
+The Reddit Mistral Bot operates based on a few key principles:
+
+1. Top Post Extraction: The bot extracts the top 5 posts from the specified subreddit. This is done by querying Reddit's top posts endpoint using the PRAW (Python Reddit API Wrapper) library. The bot fetches the titles and self-text of these posts, which provide context and help the bot understand the type of content that is performing well in the subreddit.
+
+2. Keyword Integration: Users input a list of keywords they want the generated post to be related to. These keywords are used to steer the AI-generated content towards the user's desired topic or theme.
+
+3. Prompt Formation: The bot combines the top 5 posts (extracted in the previous step) with the keywords provided by the user to form a detailed prompt for Mistral AI. The prompt may look something like this:
+
+```python
+You are a knowledgeable and curious Reddit user creating posts for the subreddit r{tagetsubreddit}. Posts should spark scientific curiosity or provide interesting insights in a conversational, natural, and human-like tone.
+
+    Here are the top 5 posts from the subreddit to give you an idea of the style:
+    {top_posts_text}
+
+    Keywords: {keywords_text}
+
+    Based on this information, generate a post with the following format:
+    {{
+        "title": "Your attention-grabbing title here",
+        "self_text": "The additional details or context here. End with a thought-provoking question to invite discussion."
+    }}
+
+    Ensure the post is relevant to the subreddit, follows its rules, and provides accurate information. Now generate a post.
+```
 
 ## Setup
 
