@@ -1,6 +1,7 @@
 # Reddit Mistral Bot
 
-A Reddit bot that automatically generates and posts content using Mistral AI.
+About
+A Reddit bot that automatically generates and posts content using Mistral AI.The user can also schedules post by time slots.
 
 ## Features
 
@@ -9,6 +10,13 @@ A Reddit bot that automatically generates and posts content using Mistral AI.
 - Basic comment generation capability
 - Error handling and logging
 - Scheduled posting system
+
+## Streamlit App
+
+## Base Implemenation
+
+![alt text](db/image.png)
+![alt text](db/image1.png)
 
 ## Setup
 
